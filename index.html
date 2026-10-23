@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100918">
+  <meta name="description" content="Portafolio de Stephania Gonzalez Mur, desarrolladora de videojuegos enfocada en Unity, C# y mecánicas de gameplay.">
+  <title>Stephania Gonzalez Mur | Unity & C# Game Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#home" aria-label="Inicio">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-name">GAMEDEV<span class="brand-dot">.</span></span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#projects" data-i18n="navProjects">Proyectos</a>
+          <a href="#about" data-i18n="navAbout">Sobre mí</a>
+          <a href="#skills" data-i18n="navSkills">Habilidades</a>
+          <a href="#contact" data-i18n="navContact">Contacto</a>
+        </div>
+        <div class="language-switch" aria-label="Language selector">
+          <button type="button" class="lang-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span><span data-i18n="eyebrow">Desarrollo de videojuegos · Unity · C#</span></p>
+        <h1 class="hero-name">Stephania Gonzalez Mur</h1>
+        <h2 class="hero-slogan"><span data-i18n="heroLine1">Desarrolladora de videojuegos</span> <span class="gradient-text" data-i18n="heroLine2">creando experiencias interactivas.</span></h2>
+        <p class="hero-description" data-i18n="heroDescription">Soy una desarrolladora de videojuegos en formación, enfocada en Unity y C#. Me gusta experimentar con mecánicas de juego, resolver problemas y convertir ideas en experiencias interactivas.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects"><span data-i18n="viewProjects">Ver mis proyectos</span><span aria-hidden="true">↘</span></a>
+          <button class="button button-secondary cv-button" type="button" id="cvButton" data-i18n="cvButton">Ver mi CV</button>
+          <a class="button button-secondary external-link" data-link="linkedin" href="#contact" data-i18n="linkedinButton">Conectemos en LinkedIn ↗</a>
+        </div>
+        <div class="hero-meta"><span data-i18n="heroMeta1">Enfocada en gameplay programming</span><span class="meta-divider">✦</span><span data-i18n="heroMeta2">Aprendiendo mediante proyectos</span></div>
+      </div>
+      <aside class="profile-card" aria-label="Developer profile">
+        <div class="card-topline"><span data-i18n="profileLabel">PERFIL DE JUGADORA</span><span class="card-index">001</span></div>
+        <div class="profile-emblem" aria-hidden="true"><span>✦</span><i></i><b></b></div>
+        <div class="profile-bottom"><div><p class="profile-kicker" data-i18n="currentlyLearning">ACTUALMENTE SUBIENDO DE NIVEL</p><h2>Unity <span>+</span> C#</h2></div><span class="level-badge">LVL 01</span></div>
+        <div class="profile-bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="profile-note" data-i18n="profileNote">Prototipos, sistemas de juego y aprendizaje continuo.</p>
+      </aside>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="selectedWork">TRABAJO SELECCIONADO</p><h2 data-i18n="projectsTitle">Proyectos destacados<span class="accent-period">.</span></h2></div><p data-i18n="projectsIntro">Una selección de proyectos y prototipos donde practico programación, diseño de mecánicas y resolución de problemas.</p></div>
+      <div class="project-grid">
+        <article class="project-card project-helenia project-card-featured">
+          <div class="helenia-gallery" aria-label="Capturas de gameplay de Helenia">
+            <img class="helenia-main-shot" src="images/helenia-llave.png" alt="Helenia: personaje explorando una habitación y buscando una llave para desbloquear la puerta" loading="lazy">
+            <div class="helenia-thumbnails">
+              <img src="images/helenia-mono.png" alt="Helenia: el personaje se enfrenta a un mono patrullero" loading="lazy">
+              <img src="images/helenia-cristal.png" alt="Helenia: un cristal activa un efecto luminoso durante el juego" loading="lazy">
+            </div>
+            <div class="gallery-label">HELENIA · GAMEPLAY 3D</div>
+          </div>
+          <div class="project-content">
+            <div class="project-heading"><div><p class="project-type" data-i18n="personalProject">PROYECTO PERSONAL</p><h3>Helenia</h3></div><span class="pill" data-i18n="publishedPlayable">Prototipo jugable</span></div>
+            <p data-i18n="heleniaDescription">Una aventura 3D de fantasía oscura con estética low-poly, inspirada en los paisajes y la biodiversidad de Colombia. En este prototipo desarrollé mecánicas de juego, comportamientos de enemigos e interacciones de interfaz para dar vida a una primera sección de la experiencia.</p>
+            <div class="tag-list"><span>Unity</span><span>C#</span><span>3D</span><span data-i18n="gameplayMechanics">Mecánicas de gameplay</span><span data-i18n="interaction">Interacción</span></div>
+            <div class="project-actions project-actions-wrap"><button class="text-link detail-toggle" type="button" aria-expanded="false" aria-controls="heleniaDetails" data-i18n="projectDetailsButton">Ver detalles del proyecto ↓</button><a class="text-link external-link" data-link="itchio" href="https://steff19.itch.io/" target="_blank" rel="noopener noreferrer"><span data-i18n="itchLink">Explorar mi perfil de itch.io</span> ↗</a></div>
+          <div class="helenia-details" id="heleniaDetails" hidden>
+            <p class="details-intro" data-i18n="heleniaIntro">Este prototipo jugable reúne la primera parte del mundo y varias de las mecánicas principales que desarrollé para dar forma a la experiencia.</p>
+            <div class="details-grid">
+              <section><h4 data-i18n="mechanicsHeading">Mecánicas de juego e IA de enemigos</h4><ul><li data-i18n="mechanic1">Implementé en C# mecánicas para lanzar piedras, distraer enemigos y congelar temporalmente sus rutas de patrulla usando un cristal mágico.</li><li data-i18n="mechanic2">Programé comportamientos de enemigos con patrullaje y persecución mediante NavMesh.</li><li data-i18n="mechanic3">Implementé la interacción con llaves para que el jugador pueda avanzar por el entorno.</li></ul></section>
+              <section><h4 data-i18n="uiHeading">Diseño e implementación de UI</h4><ul><li data-i18n="ui1">Diseñé wireframes en Figma para organizar cómo se vería y distribuiría la interfaz.</li><li data-i18n="ui2">Implementé la interfaz con Unity UI Toolkit: personalicé elementos visuales y programé las interacciones en C# para conectarla con la lógica del juego.</li></ul></section>
+              <section><h4 data-i18n="controllerHeading">Control del personaje</h4><ul><li data-i18n="controller1">Adapté un Third Person Controller ya existente para ajustarlo a lo que necesitaba el proyecto.</li><li data-i18n="controller2">Modifiqué el movimiento para bloquearlo durante el diálogo introductorio y evitar entradas de movimiento en ciertas animaciones.</li></ul></section>
+              <section><h4 data-i18n="assetsHeading">Integración de recursos</h4><ul><li data-i18n="assets1">Integré modelos 3D, animaciones, materiales, sprites, imágenes, sonidos y sistemas de partículas para construir esta versión jugable.</li><li data-i18n="assets2">Utilicé recursos de terceros cuando fue necesario y los adapté para que encajaran en la experiencia.</li></ul></section>
+            </div>
+            <p class="project-meta-line"><strong data-i18n="roleLabel">Mi rol:</strong> <span data-i18n="roleValue">Desarrolladora de videojuegos generalista</span> · <strong data-i18n="statusLabel">Estado:</strong> <span data-i18n="statusValue">Prototipo jugable de una sección inicial</span></p>
+            <button class="text-link process-toggle" type="button" aria-expanded="false" aria-controls="heleniaProcess" data-i18n="processButton">Explorar el proceso de desarrollo ↓</button>
+            <div class="process-gallery" id="heleniaProcess" hidden><p data-i18n="processCaption">Wireframe de planificación de la interfaz en Figma. Las flechas muestran el flujo entre pantallas.</p><button type="button" class="wireframe-open" aria-label="Ampliar wireframe"><img src="images/helenia-wireframe.png" alt="Wireframe de Helenia con menú principal, nivel, pausa, derrota y configuración conectados mediante flechas" loading="lazy"></button></div>
+          </div>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="section section-muted" id="about">
+      <div class="container about-layout">
+        <div class="section-heading about-heading"><p class="eyebrow" data-i18n="aboutEyebrow">DETRÁS DE LOS PROYECTOS</p><h2 data-i18n="aboutTitle">Curiosidad que se convierte en código<span class="accent-period">.</span></h2></div>
+        <div class="about-copy"><p data-i18n="aboutP1">Soy desarrolladora de videojuegos de Colombia y tecnóloga en Desarrollo de Videojuegos y Entornos Interactivos del SENA. Me encanta programar mecánicas de juego e interfaces de usuario con Unity y C#, así como explorar la narrativa interactiva.</p><p data-i18n="aboutP2">Disfruto transformar ideas en experiencias jugables donde las personas sientan que forman parte de la historia. Me entusiasma aportar a un gran equipo, seguir aprendiendo y crecer junto a él.</p><div class="about-highlight"><span class="highlight-icon">✦</span><p data-i18n="aboutHighlight">Me gusta aprender haciendo: probar una idea, encontrar el problema y mejorar la solución paso a paso.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="skills">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="toolbox">MI CAJA DE HERRAMIENTAS</p><h2 data-i18n="skillsTitle">Habilidades en construcción<span class="accent-period">.</span></h2></div><p data-i18n="skillsIntro">Tecnologías y habilidades que estoy aplicando en proyectos personales y ejercicios prácticos.</p></div>
+      <div class="skills-layout">
+        <div class="skill-panel"><span class="skill-number">01</span><div><h3 data-i18n="technicalSkills">Desarrollo técnico</h3><p data-i18n="technicalDescription">Programación y creación de prototipos interactivos.</p><div class="tag-list skill-tags"><span>Unity</span><span>C#</span><span data-i18n="gameplayMechanics">Mecánicas de juego</span><span>Input System</span><span data-i18n="physicsCollisions">Física y colisiones</span><span>NavMesh</span><span>Unity UI Toolkit <small data-i18n="learningTag">(En aprendizaje)</small></span><span>Git / GitHub <small data-i18n="learningTag">(En aprendizaje)</small></span></div></div></div>
+        <div class="skill-panel"><span class="skill-number">02</span><div><h3 data-i18n="workSkills">Habilidades personales</h3><p data-i18n="workDescription">Habilidades que aplico al resolver problemas y desarrollar proyectos.</p><div class="tag-list skill-tags"><span data-i18n="problemSolving">Resolución de problemas</span><span data-i18n="persistence">Perseverancia</span><span data-i18n="analyticalThinking">Pensamiento analítico</span><span data-i18n="continuousLearning">Aprendizaje continuo</span></div></div></div>
+      </div>
+      <div class="experience-strip"><div><span class="strip-label" data-i18n="educationLabel">FORMACIÓN</span><strong data-i18n="educationTitle">Tecnólogo en Desarrollo de Videojuegos y Entornos Interactivos</strong><span data-i18n="educationPlace">SENA · Colombia</span></div><div><span class="strip-label" data-i18n="trainingLabel">FORMACIÓN COMPLEMENTARIA</span><strong>Generation Colombia</strong><span data-i18n="trainingDescription">Entrenamiento orientado al desarrollo profesional y técnico.</span></div></div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="contact-panel"><div class="contact-decoration" aria-hidden="true">✦</div><p class="eyebrow" data-i18n="contactEyebrow">HAGAMOS ALGO INTERESANTE</p><h2 data-i18n="contactTitle">¿Creamos algo juntos?</h2><p data-i18n="contactDescription">Me encanta conectar con personas que comparten el interés por el desarrollo de videojuegos, las ideas creativas y las experiencias interactivas. Estoy abierta a conversar sobre oportunidades laborales, colaboraciones o proyectos.</p><div class="contact-actions"><a class="button button-primary external-link" data-link="email" href="#contact"><span data-i18n="emailButton">Escríbeme por correo</span> ↗</a><a class="button button-secondary external-link" data-link="linkedin" href="#contact">LinkedIn ↗</a><a class="button button-secondary external-link" data-link="itchio" href="#contact">itch.io ↗</a></div><p class="contact-note" data-i18n="contactNote">Los enlaces personales se activarán cuando añadas tus direcciones reales.</p></div>
+    </section>
+  </main>
+
+  <div class="notice-modal" id="cvNotice" role="dialog" aria-modal="true" aria-labelledby="cvNoticeTitle" hidden><div class="notice-card"><button class="modal-close" type="button" data-close-modal aria-label="Cerrar">×</button><p class="eyebrow" data-i18n="cvNoticeEyebrow">PRÓXIMAMENTE</p><h2 id="cvNoticeTitle" data-i18n="cvNoticeTitle">Mi CV estará disponible pronto</h2><p data-i18n="cvNoticeText">Estamos preparando el PDF para que puedas consultarlo y descargarlo desde aquí.</p><button class="button button-primary" type="button" data-close-modal data-i18n="closeButton">Cerrar</button></div></div>
+  <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Wireframe ampliado" hidden><button class="modal-close image-modal-close" type="button" data-close-image aria-label="Cerrar imagen">×</button><img src="images/helenia-wireframe.png" alt="Wireframe ampliado de Helenia"></div>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">✦</span><span class="brand-name">GAMEDEV<span class="brand-dot">.</span></span></a><p>© <span id="year"></span> <span data-i18n="footerText">Portafolio de desarrollo de videojuegos · Hecho con curiosidad.</span></p><a class="back-top" href="#home" data-i18n="backTop">Volver arriba ↑</a></div></footer>
+</body>
+</html>
