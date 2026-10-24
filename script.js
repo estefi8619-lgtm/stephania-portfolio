@@ -32,7 +32,7 @@ const translations = {
     physicsCollisions:"Física y colisiones",learningTag:"(En aprendizaje)",problemSolving:"Resolución de problemas",persistence:"Perseverancia",analyticalThinking:"Pensamiento analítico",continuousLearning:"Aprendizaje continuo",
     educationLabel:"FORMACIÓN",educationTitle:"Tecnóloga en Desarrollo de Videojuegos y Entornos Interactivos",educationPlace:"SENA · Colombia",trainingLabel:"FORMACIÓN COMPLEMENTARIA",trainingDescription:"Entrenamiento orientado al desarrollo profesional y técnico.",
     contactEyebrow:"HAGAMOS ALGO INTERESANTE",contactTitle:"¡Conectemos!",contactDescription:"Me encanta conectar con personas que comparten el interés por el desarrollo de videojuegos, las ideas creativas y las experiencias interactivas. Estoy abierta a conversar sobre oportunidades laborales, colaboraciones o proyectos.",emailButton:"Escríbeme por correo",contactNote:"También puedes encontrarme en LinkedIn e itch.io.",footerText:"Portafolio de desarrollo de videojuegos · Hecho con curiosidad.",backTop:"Volver arriba ↑",
-    figmaPrototypeLink:"Ver prototipo interactivo en Figma ↗",cvNoticeEyebrow:"PRÓXIMAMENTE",cvNoticeTitle:"Mi CV estará disponible pronto",cvNoticeText:"Estamos preparando el PDF para que puedas consultarlo y descargarlo desde aquí.",closeButton:"Cerrar"
+    figmaPrototypeLink:"Ver prototipo interactivo en Figma ↗"
   },
   en: {
     skip:"Skip to content",navProjects:"Projects",navAbout:"About me",navSkills:"Skills",navContact:"Contact",
@@ -55,7 +55,7 @@ const translations = {
     physicsCollisions:"Physics & Collisions",learningTag:"(Currently learning)",problemSolving:"Problem-Solving",persistence:"Persistence",analyticalThinking:"Analytical Thinking",continuousLearning:"Continuous Learning",
     educationLabel:"EDUCATION",educationTitle:"Technologist in Video Game and Interactive Environments Development",educationPlace:"SENA · Colombia",trainingLabel:"ADDITIONAL TRAINING",trainingDescription:"Training focused on professional and technical development.",
     contactEyebrow:"LET’S MAKE SOMETHING INTERESTING",contactTitle:"Let’s connect!",contactDescription:"I enjoy connecting with people who share an interest in game development, creative ideas, and interactive experiences. I’m open to conversations about job opportunities, collaborations, or game projects.",emailButton:"Email me",contactNote:"You can also find me on LinkedIn and itch.io.",footerText:"Game development portfolio · Made with curiosity.",backTop:"Back to top ↑",
-    figmaPrototypeLink:"View interactive prototype on Figma ↗",cvNoticeEyebrow:"COMING SOON",cvNoticeTitle:"My CV will be available soon",cvNoticeText:"The PDF is being prepared so you’ll be able to view and download it here.",closeButton:"Close"
+    figmaPrototypeLink:"View interactive prototype on Figma ↗"
   }
 };
 
