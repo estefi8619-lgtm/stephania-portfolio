@@ -45,3 +45,14 @@
 .process-actions{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin-top:16px}
 .process-actions .process-toggle{margin:0}
 @media(max-width:650px){.profile-avatar-wrap{width:min(100%,235px)}}
+
+/* Independent bilingual asset credits disclosure */
+.credits-disclosure{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.credits-toggle{background:none;border:0;padding:0;color:var(--purple-bright);cursor:pointer;font-weight:800;text-align:left}
+.credits-toggle:hover{color:var(--pink)}
+.credits-panel{margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);color:var(--muted);font-size:.86rem;line-height:1.75}
+.credits-panel ol,.credits-panel ul{padding-left:22px}
+.credits-panel li+li{margin-top:5px}
+.credits-panel p{margin:0 0 12px}
+.credits-panel p:last-child{margin-bottom:0}
+.credits-panel[hidden]{display:none!important}
