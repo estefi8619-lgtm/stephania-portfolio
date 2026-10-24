@@ -6,7 +6,7 @@ const LINKS = {
 
 function configureLinks() {
   document.querySelectorAll('[data-link="linkedin"]').forEach(a => { a.href = LINKS.linkedin; a.target = '_blank'; a.rel = 'noopener noreferrer'; });
-  document.querySelectorAll('[data-link="email"]').forEach(a => { a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(LINKS.email)}`; a.target = "_blank"; a.rel = "noopener noreferrer"; });
+  document.querySelectorAll('[data-link="email"]').forEach(a => { a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(LINKS.email)}`; a.target = '_blank'; a.rel = 'noopener noreferrer'; });
   document.querySelectorAll('[data-link="itchio"]').forEach(a => { a.href = LINKS.itchio; a.target = '_blank'; a.rel = 'noopener noreferrer'; });
 }
 
@@ -32,7 +32,7 @@ const translations = {
     physicsCollisions:"Física y colisiones",learningTag:"(En aprendizaje)",problemSolving:"Resolución de problemas",persistence:"Perseverancia",analyticalThinking:"Pensamiento analítico",continuousLearning:"Aprendizaje continuo",
     educationLabel:"FORMACIÓN",educationTitle:"Tecnóloga en Desarrollo de Videojuegos y Entornos Interactivos",educationPlace:"SENA · Colombia",trainingLabel:"FORMACIÓN COMPLEMENTARIA",trainingDescription:"Entrenamiento orientado al desarrollo profesional y técnico.",
     contactEyebrow:"HAGAMOS ALGO INTERESANTE",contactTitle:"¡Conectemos!",contactDescription:"Me encanta conectar con personas que comparten el interés por el desarrollo de videojuegos, las ideas creativas y las experiencias interactivas. Estoy abierta a conversar sobre oportunidades laborales, colaboraciones o proyectos.",emailButton:"Escríbeme por correo",contactNote:"También puedes encontrarme en LinkedIn e itch.io.",footerText:"Portafolio de desarrollo de videojuegos · Hecho con curiosidad.",backTop:"Volver arriba ↑",
-    cvNoticeEyebrow:"PRÓXIMAMENTE",cvNoticeTitle:"Mi CV estará disponible pronto",cvNoticeText:"Estamos preparando el PDF para que puedas consultarlo y descargarlo desde aquí.",closeButton:"Cerrar"
+    figmaPrototypeLink:"Ver prototipo interactivo en Figma ↗",cvNoticeEyebrow:"PRÓXIMAMENTE",cvNoticeTitle:"Mi CV estará disponible pronto",cvNoticeText:"Estamos preparando el PDF para que puedas consultarlo y descargarlo desde aquí.",closeButton:"Cerrar"
   },
   en: {
     skip:"Skip to content",navProjects:"Projects",navAbout:"About me",navSkills:"Skills",navContact:"Contact",
@@ -55,7 +55,7 @@ const translations = {
     physicsCollisions:"Physics & Collisions",learningTag:"(Currently learning)",problemSolving:"Problem-Solving",persistence:"Persistence",analyticalThinking:"Analytical Thinking",continuousLearning:"Continuous Learning",
     educationLabel:"EDUCATION",educationTitle:"Technologist in Video Game and Interactive Environments Development",educationPlace:"SENA · Colombia",trainingLabel:"ADDITIONAL TRAINING",trainingDescription:"Training focused on professional and technical development.",
     contactEyebrow:"LET’S MAKE SOMETHING INTERESTING",contactTitle:"Let’s connect!",contactDescription:"I enjoy connecting with people who share an interest in game development, creative ideas, and interactive experiences. I’m open to conversations about job opportunities, collaborations, or game projects.",emailButton:"Email me",contactNote:"You can also find me on LinkedIn and itch.io.",footerText:"Game development portfolio · Made with curiosity.",backTop:"Back to top ↑",
-    cvNoticeEyebrow:"COMING SOON",cvNoticeTitle:"My CV will be available soon",cvNoticeText:"The PDF is being prepared so you’ll be able to view and download it here.",closeButton:"Close"
+    figmaPrototypeLink:"View interactive prototype on Figma ↗",cvNoticeEyebrow:"COMING SOON",cvNoticeTitle:"My CV will be available soon",cvNoticeText:"The PDF is being prepared so you’ll be able to view and download it here.",closeButton:"Close"
   }
 };
 
@@ -84,15 +84,11 @@ document.querySelectorAll(".detail-toggle, .process-toggle").forEach((button) =>
   if (button.classList.contains("detail-toggle")) button.textContent = opening ? (lang === "en" ? "Hide project details ↑" : "Ocultar detalles del proyecto ↑") : translations[lang].projectDetailsButton;
   else button.textContent = opening ? (lang === "en" ? "Hide development process ↑" : "Ocultar proceso de desarrollo ↑") : translations[lang].processButton;
 }));
-const cvNotice = document.getElementById("cvNotice");
-document.getElementById("cvButton").addEventListener("click", () => { cvNotice.hidden = false; cvNotice.querySelector("button").focus(); });
-document.querySelectorAll("[data-close-modal]").forEach(button => button.addEventListener("click", () => { cvNotice.hidden = true; document.getElementById("cvButton").focus(); }));
-cvNotice.addEventListener("click", e => { if (e.target === cvNotice) cvNotice.hidden = true; });
 const imageModal = document.getElementById("imageModal");
 document.querySelector(".wireframe-open").addEventListener("click", () => { imageModal.hidden = false; imageModal.querySelector("img").focus(); });
 document.querySelector("[data-close-image]").addEventListener("click", () => { imageModal.hidden = true; });
 imageModal.addEventListener("click", e => { if (e.target === imageModal) imageModal.hidden = true; });
-document.addEventListener("keydown", e => { if (e.key === "Escape") { cvNotice.hidden = true; imageModal.hidden = true; } });
+document.addEventListener("keydown", e => { if (e.key === "Escape") { imageModal.hidden = true; } });
 configureLinks();
 document.getElementById("year").textContent = new Date().getFullYear();
 let savedLanguage = "es"; try { savedLanguage = localStorage.getItem("portfolio-language") || "es"; } catch (_) {}
