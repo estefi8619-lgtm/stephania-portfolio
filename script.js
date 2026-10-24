@@ -6,7 +6,7 @@ const LINKS = {
 
 function configureLinks() {
   document.querySelectorAll('[data-link="linkedin"]').forEach(a => { a.href = LINKS.linkedin; a.target = '_blank'; a.rel = 'noopener noreferrer'; });
-  document.querySelectorAll('[data-link="email"]').forEach(a => { a.href = `mailto:${LINKS.email}`; });
+  document.querySelectorAll('[data-link="email"]').forEach(a => { a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(LINKS.email)}`; a.target = "_blank"; a.rel = "noopener noreferrer"; });
   document.querySelectorAll('[data-link="itchio"]').forEach(a => { a.href = LINKS.itchio; a.target = '_blank'; a.rel = 'noopener noreferrer'; });
 }
 
