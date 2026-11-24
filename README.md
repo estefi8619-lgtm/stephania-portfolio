@@ -9,9 +9,10 @@ Sitio web estático bilingüe (español/inglés), con estética oscura en morado
 
 ## Contenido incluido
 - Presentación profesional y secciones de proyectos, sobre mí, habilidades y contacto.
-- Proyecto Helenia con tres capturas reales del prototipo.
+- Proyecto Helenia con tres capturas reales del prototipo y detalles técnicos desplegables.
+- Proyecto Echoes of Myself con capturas del menú principal, pausa y controles, aportes de UI y wireframe de Figma.
 - Detalles técnicos desplegables sobre mecánicas, IA de enemigos, UI, controlador e integración de recursos.
-- Wireframe de planificación de la interfaz que se puede ampliar.
+- Wireframes de planificación de interfaces que se pueden ampliar.
 - Botón de CV diseñado y funcional como aviso temporal. Cuando el PDF esté listo, se podrá conectar al archivo real.
 - Enlaces de correo, LinkedIn e itch.io.
 

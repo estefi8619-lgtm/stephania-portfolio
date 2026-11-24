@@ -59,3 +59,18 @@
 
 /* Helenia development process: two wireframes and storyboard */
 .process-gallery{display:grid;gap:24px;margin-top:16px}.process-item{min-width:0}.process-item p{margin:0 0 12px;color:var(--muted);font-size:.9rem}.process-item .wireframe-open img{width:100%;height:auto;object-fit:contain;background:rgba(255,255,255,.025)}.storyboard-item{padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.storyboard-link{display:inline-flex;margin-top:2px}
+
+/* Echoes of Myself project gallery and process */
+.echoes-gallery{position:relative;display:grid;grid-template-columns:1.45fr 1fr;gap:8px;height:340px;padding:8px;background:#10152a;overflow:hidden}
+.echoes-gallery img{display:block;width:100%;height:100%;object-fit:cover;border-radius:9px}
+.echoes-main-shot{min-width:0}
+.echoes-thumbnails{display:grid;grid-template-rows:1fr 1fr;gap:8px;min-height:0}
+.echoes-details{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.echoes-details h4{margin:0 0 8px;font-size:.95rem}
+.echoes-details ul{margin:0 0 16px;padding-left:20px;color:var(--muted);font-size:.82rem;line-height:1.8}
+.echoes-process{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(15,12,30,.55)}
+.echoes-process p{margin:0 0 12px;color:var(--muted);font-size:.8rem}
+.echoes-process .wireframe-open{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+.echoes-process .wireframe-open img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;border-radius:8px}
+.echoes-details .project-meta-line{margin-top:18px;color:var(--muted-2);font-size:.75rem}
+@media(max-width:650px){.echoes-gallery{grid-template-columns:1fr;grid-template-rows:1.3fr 1fr;height:360px}.echoes-thumbnails{grid-template-columns:1fr 1fr;grid-template-rows:1fr}.echoes-gallery .gallery-label{left:14px;bottom:14px}}

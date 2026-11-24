@@ -1,13 +1,16 @@
 const LINKS = {
   linkedin: "https://www.linkedin.com/in/stephania-gonzalez-mur-gamedev",
   email: "stephaniagonzalezmur@gmail.com",
-  itchio: "https://steff19.itch.io/"
+  itchio: "https://steff19.itch.io/",
+  helenia: "https://steff19.itch.io/helenia",
+  echoes: "https://wooliesam.itch.io/echoesofmyself"
 };
 
 function configureLinks() {
   document.querySelectorAll('[data-link="linkedin"]').forEach(a => { a.href = LINKS.linkedin; a.target = '_blank'; a.rel = 'noopener noreferrer'; });
   document.querySelectorAll('[data-link="email"]').forEach(a => { a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(LINKS.email)}`; a.target = '_blank'; a.rel = 'noopener noreferrer'; });
   document.querySelectorAll('[data-link="itchio"]').forEach(a => { a.href = LINKS.itchio; a.target = '_blank'; a.rel = 'noopener noreferrer'; });
+  ["helenia", "echoes"].forEach(key => document.querySelectorAll(`[data-link="${key}"]`).forEach(a => { a.href = LINKS[key]; a.target = '_blank'; a.rel = 'noopener noreferrer'; }));
 }
 
 const translations = {
@@ -19,6 +22,7 @@ const translations = {
     profileLabel:"PERFIL DE DESARROLLO",currentlyLearning:"APRENDIENDO Y CRECIENDO",profileNote:"Prototipos, sistemas de juego y experiencias interactivas.",
     selectedWork:"TRABAJO SELECCIONADO",projectsTitle:"Proyectos destacados",projectsIntro:"Proyectos y prototipos donde desarrollo mecánicas, lógica de juego e interacciones.",
     personalProject:"PROYECTO PERSONAL",publishedPlayable:"PROTOTIPO JUGABLE",gameplayMechanics:"Mecánicas de juego",interaction:"Interacción",
+    echoesType:"VIDEOJUEGO 2D · GAME JAM DE 48 HORAS",echoesRole:"UI Designer / UI Programmer",echoesDescription:"Echoes of Myself es un videojuego de aventura 2D desarrollado en equipo durante una Game Jam de 48 horas. La experiencia combina exploración, resolución de desafíos y mecánicas relacionadas con la transformación y el intercambio entre personajes.",uiDesignTag:"Diseño e implementación de UI",echoesPlayLink:"Jugar Echoes of Myself ↗",echoesContributionHeading:"Mi participación",echoesContribution1:"Diseñé e implementé las interfaces de usuario y la navegación entre los distintos menús y pantallas del juego.",echoesContribution2:"Programé funcionalidades de interfaz como el sistema de pausa, las ventanas de confirmación y la navegación entre pantallas.",echoesContribution3:"Integré efectos de sonido en los elementos interactivos de la interfaz.",echoesProcessButton:"Ver proceso de desarrollo ↓",echoesWireframeCaption:"Wireframe de Figma: planificación de las pantallas y su organización.",echoesDateLabel:"Fecha:",echoesDate:"Noviembre de 2026",echoesTechLabel:"Tecnologías:",
     heleniaDescription:"Es una aventura 3D de fantasía oscura con estética low-poly, inspirada en los paisajes y la biodiversidad de Colombia. En este prototipo desarrollé mecánicas de juego, comportamientos de enemigos e interacciones de interfaz para dar vida a una primera sección de la experiencia.",
     projectDetailsButton:"Ver detalles del proyecto ↓",itchLink:"Explorar mi perfil de itch.io",heleniaIntro:"Este prototipo jugable reúne la primera parte del mundo y varias de las mecánicas principales que desarrollé para dar forma a la experiencia.",
     mechanicsHeading:"Mecánicas de juego e IA de enemigos",mechanic1:"Implementé en C# mecánicas para lanzar piedras, distraer enemigos y congelar temporalmente sus rutas de patrulla usando un cristal mágico.",mechanic2:"Programé comportamientos de enemigos con patrullaje y persecución mediante NavMesh.",mechanic3:"Implementé la interacción con llaves para que el jugador pueda avanzar por el entorno.",
@@ -42,6 +46,7 @@ const translations = {
     profileLabel:"DEVELOPER PROFILE",currentlyLearning:"LEARNING AND GROWING",profileNote:"Prototypes, game systems, and interactive experiences.",
     selectedWork:"SELECTED WORK",projectsTitle:"Featured projects",projectsIntro:"Projects and prototypes where I develop gameplay mechanics, game logic, and interactions.",
     personalProject:"PERSONAL PROJECT",publishedPlayable:"PLAYABLE PROTOTYPE",gameplayMechanics:"Gameplay mechanics",interaction:"Interaction",
+    echoesType:"2D GAME · 48-HOUR GAME JAM",echoesRole:"UI Designer / UI Programmer",echoesDescription:"Echoes of Myself is a 2D adventure game developed as a team during a 48-hour game jam. The experience combines exploration, challenge-solving, and mechanics involving transformation and swapping between characters.",uiDesignTag:"UI design & implementation",echoesPlayLink:"Play Echoes of Myself ↗",echoesContributionHeading:"My contribution",echoesContribution1:"Designed and implemented the user interfaces and navigation between the game’s menus and screens.",echoesContribution2:"Programmed UI features such as the pause system, confirmation dialogs, and screen navigation.",echoesContribution3:"Integrated sound effects into interactive UI elements.",echoesProcessButton:"View development process ↓",echoesWireframeCaption:"Figma wireframe: planning and organization of the game screens.",echoesDateLabel:"Date:",echoesDate:"November 2026",echoesTechLabel:"Technologies:",
     heleniaDescription:"Helenia is a low-poly 3D dark fantasy adventure inspired by Colombia’s landscapes and biodiversity. In this prototype, I developed gameplay mechanics, enemy behaviors, and UI interactions to bring an early section of the experience to life.",
     projectDetailsButton:"View project details ↓",itchLink:"Explore my itch.io profile",heleniaIntro:"This playable prototype brings together the first part of the world and several core mechanics I developed to shape the experience.",
     mechanicsHeading:"Gameplay Mechanics & Enemy AI",mechanic1:"Implemented C# mechanics for throwing stones to distract enemies and temporarily freeze their patrol routes using a magic crystal.",mechanic2:"Programmed enemy patrol and chase behaviors using NavMesh.",mechanic3:"Implemented key interactions that allow the player to progress through the environment.",
@@ -83,13 +88,14 @@ document.querySelectorAll(".credits-toggle").forEach((button) => button.addEvent
   const lang = document.documentElement.lang === "en" ? "en" : "es";
   button.textContent = opening ? (lang === "en" ? "Hide asset credits ↑" : "Ocultar créditos de recursos ↑") : translations[lang].creditsButton;
 }));
-document.querySelectorAll(".detail-toggle, .process-toggle").forEach((button) => button.addEventListener("click", () => {
+document.querySelectorAll(".detail-toggle, .process-toggle, .echoes-process-toggle").forEach((button) => button.addEventListener("click", () => {
   const panel = document.getElementById(button.getAttribute("aria-controls"));
   const opening = panel.hidden;
   panel.hidden = !opening;
   button.setAttribute("aria-expanded", String(opening));
   const lang = document.documentElement.lang === "en" ? "en" : "es";
   if (button.classList.contains("detail-toggle")) button.textContent = opening ? (lang === "en" ? "Hide project details ↑" : "Ocultar detalles del proyecto ↑") : translations[lang].projectDetailsButton;
+  else if (button.classList.contains("echoes-process-toggle")) button.textContent = opening ? (lang === "en" ? "Hide development process ↑" : "Ocultar proceso de desarrollo ↑") : translations[lang].echoesProcessButton;
   else button.textContent = opening ? (lang === "en" ? "Hide development process ↑" : "Ocultar proceso de desarrollo ↑") : translations[lang].processButton;
 }));
 const imageModal = document.getElementById("imageModal");
